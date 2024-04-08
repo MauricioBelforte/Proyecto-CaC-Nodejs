@@ -1,0 +1,20 @@
+- Quite los subindices li de PANTALONES REMERAS CAMPERAS, la funcionalidad en ccs sigue estando. 
+Solo los quite para que sea mas facil la primer entrega del proyecto
+
+
+Refactoring para hacerlo responsivo
+
+- Cambie esto
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  Por esto
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  Web optimizada para los diferentes anchos de pantalla en una de las teorias lo recomienda
+
+- Agregue el root con paleta de colores.
+Tambien defini tamaño de fuente en vw (Es decir relacionado con respecto al ancho de la pantalla)
+
+- Creo haber cambiado todos los px por vw, hasta el tamaño de las fuentes
+y todos los colores en hexadecimal por las var(--)
+
+- Coloque las carpetas css js e imagenes dentro de la carpeta assets que la profe uso en la ultima clase.
+ Parece que es una mejor practica
