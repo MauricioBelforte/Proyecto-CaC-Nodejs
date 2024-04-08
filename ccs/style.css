@@ -1,0 +1,270 @@
+*  {  /*Normalizacion: Esto es para darle un formato general a toda la pagina, para evitar problemas con los margenes automaticos que ponen los navegadores*/
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root {
+    
+    --color-negro: #000000;
+    --color-primario: #333;
+    --color-blanco: #fff;
+    --color-background: #f7f7f7;
+    --color-secundario: #e9e8e8;
+    --color-terceario: #d3d3d3;
+    --color-cuaternario:  #acacac ;
+    
+    --bg-input-color:#4f31572c;
+    font-size: 1.8vw;
+}
+
+body{
+
+    background-color: var(--color-background);
+}
+
+ a{
+    color: var(--color-secundario);
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.7vw;
+    
+}
+
+
+/*Inicio de estilos para reutilizar*/
+
+.letra-blanca{
+    color: var(--color-blanco);
+}
+.centrar-titulo{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+/*Fin estilos para reutilizar*/
+
+/* Inicio de la barra de navegacion nav que su clase se llama menu-principal */
+.menu-principal{
+    width: 100%;
+    height: 10vw;
+    display: flex; /* para que todos los elementos de la barra nav (iconos items y botones) se pongan uno al lado del otro*/ 
+    justify-content: space-between; /* los elementos between css repartirán el espacio sobrante de su contenedor de manera equitativa entre ellos*/
+    align-items: center; /*para alinear verticalmente*/
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    padding: 1vw 1.5vw;
+}
+
+.menu-principal .logo {
+    display: inline-flex;/* lo centraba mejor en el responsive*/
+    width: 18vw;
+    transition: all 0.2s ease-in-out;
+    margin: 0.2vw 0.1vw 0.1vw 0vw;
+}
+.menu-principal .logo:hover {
+    transform:scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+.menu-principal .logo img {
+    width: 15vw;
+    margin: 0.2vw 0.1vw 0.1vw 0vw;
+    padding: 0.2vw 0.1vw 0.1vw 0vw;
+    
+}
+
+.menu-principal ul {
+    list-style: none;/* para quitar los puntitos a las listas*/
+    margin-left: 1vw;
+    margin-right: auto /*con esto coloque los items ul mas a la izquierda pegados al logo*/
+  }
+
+
+.menu-principal ul li {
+   
+    padding: 1vw 1vw 1vw 1vw ;
+    height: 10%;
+    position: relative;
+    display: inline-flex; /*para poner la lista horizontal puse inline-block pero cambie a flex porque se centra mejor verticalmente en el responsive*/
+  }
+
+
+
+  .menu-principal ul li:hover > a{ /*Para dejar el menu marcado al desplegar*/
+    color: var(--color-cuaternario);
+  }
+
+  .menu-principal ul li ul {
+    display: none; /*para ocultar los elementos ul hijos de li*/
+    position: absolute;
+    background-color: var(--color-primario);
+    
+    top: 100%; /*con top y left puedo alinear el menu desplegabler con respecto al indice HOMBRE MUJER NIÑOS*/
+    left: 0;
+}
+
+.menu-principal ul li ul li {
+   width: 100%; /*porque sino los subitems li cuando hacia el hover no ocupaba todo el ancho*/
+   
+}
+
+
+
+  .menu-principal ul li a{
+    text-decoration: none; /* para quitar el subrayado de los enlaces a*/
+    padding: 0.5vw;
+   /* display: block;*/
+     /*Para ponerle color a las letras que estaban azules*/
+    font-size: 1.8vw;
+
+    text-align: center;
+    
+  }
+  
+  .menu-principal ul li:hover ul { /* Cuando hago hover en el elemento li los elementos hijos ul se muestran*/
+    display: block;
+    
+}
+
+
+
+
+.botones-inicio{
+    display: flex;
+    align-items: center;
+    right: 100;
+    
+}
+.botones-inicio button {
+    margin-left: 1vw;
+    background-color: #555;
+    color: var(--color-secundario);
+    border: none;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+.botones-inicio button:hover {
+    background-color: #777;
+    color: var(--color-blanco);
+}
+
+
+.boton-carrito{
+    border: none;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    margin: 1vw 0.1vw 1vw 2vw;
+    padding: 0.5vw;
+    font-size:3vw;
+}
+
+.boton-carrito:hover{ 
+    color: var(--color-terceario);  
+}
+
+
+/* Fin de la barra de navegacion nav */
+
+
+
+/* Inicio de la ventana modal */
+.modal-carrito {
+    display: none;
+    position: fixed;
+    z-index: 2; /*para darle una altura por encima del resto*/
+    right: 0; /* para posicionarlo arriba a la derecha*/
+    top: 0;
+    width: 100%; /* Anchura del modal */
+    height: 100%; /* Altura del modal */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo opaco */
+}
+
+.modal-content {
+    background-color: var(--color-background);
+    
+    padding: 10px;
+
+    width: 50%; /* Anchura del contenido */
+    height: 100%; /* Altura del contenido */
+    float: right; /* Alinear a la derecha */
+    box-sizing: border-box; /* Incluir el borde y el relleno en el tamaño */
+}
+
+.modal-lista{
+    margin-top: 20px;
+}
+
+.close {    /*esto es la x para cerrar el modal del carrito*/
+    color: #aaa;
+    float: right;
+    
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--color-negro);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Fin de la ventana modal */
+
+/*Inicio del centro*/
+
+
+.contenedor-centrado {
+    text-align: center;
+    padding: 2vw;
+}
+
+
+
+.ofertas {
+    width: 100%;
+}
+
+.ofertas img{
+    max-width: 100%;
+    
+}
+
+ /*Fin del centro*/
+
+
+ /*Inicio del footer*/
+
+
+ footer{
+    width: 100%;
+    background-color: var(--color-primario);
+    display: inline-block; /*Tuve que poner este display porque sino el margen superior de los logos salia del footer*/
+ }
+.redes{
+    display: flex;   /*para centrar los logos */
+    justify-content: center;
+    margin: 2vw;
+}
+
+
+
+.modificar-icono{
+    padding: 1vw;
+    font-size: 4vw;
+    color: var(--color-secundario);
+}
+
+.modificar-icono:hover{
+    color: var(--color-cuaternario);
+}
+
+ /*Fin del footer*/
