@@ -1,0 +1,7 @@
+- Agregado el favicon con el logo actualizado (si se abre el archivo index.html se puede ver, pero desde el live server de visual studio code no se ve el favicon)
+
+- Agregado un carrusel utilizando bootstrap.
+  Se agregaron todos los archivos necesarios en la carpeta bootstrap 
+  Se agregaron los enlaces link y script en el index.html para poder usar bootstrap
+  Se modificaron algunos estilos en el archivo style.css porque generaban conflictos con los estilos de bootstrap
+
