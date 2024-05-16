@@ -19,11 +19,11 @@
     --color-cuaternario:  #acacac ;
     
     --bg-input-color:#4f31572c;
-    font-size: 1.8vw;
+    font-size: 1.5vw;
 }
 
 body{
-
+    
     background-color: var(--color-background);
 }
 
@@ -36,6 +36,11 @@ body{
     
 }
 
+h1,h2,h3{
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
 /*Inicio de estilos para reutilizar*/
 
@@ -43,7 +48,7 @@ body{
     color: var(--color-blanco);
 }
 .centrar-titulo{
-    margin-top: 5vh;
+    margin-top: 3vh;
     display: flex;
     justify-content: center;
 }
@@ -52,7 +57,7 @@ body{
 /* Inicio de la barra de navegacion nav que su clase se llama menu-principal */
 .menu-principal{
     width: 100%;
-    height: 10vw;
+    height: 7vw;
     display: flex; /* para que todos los elementos de la barra nav (iconos items y botones) se pongan uno al lado del otro*/ 
     justify-content: space-between; /* los elementos between css repartirán el espacio sobrante de su contenedor de manera equitativa entre ellos*/
     align-items: center; /*para alinear verticalmente*/
@@ -72,13 +77,16 @@ body{
     transition: all 0.2s ease-in-out;
 }
 .menu-principal .logo img {
-    width: 15vw;
+    width: 10vw;
     margin: 0.2vw 0.1vw 0.1vw 0vw;
     padding: 0.2vw 0.1vw 0.1vw 0vw;
     
 }
 
 .menu-principal ul {
+   
+    margin-top: auto;
+    margin-bottom: auto;
     list-style: none;/* para quitar los puntitos a las listas*/
     margin-left: 1vw;
     margin-right: auto /*con esto coloque los items ul mas a la izquierda pegados al logo*/
@@ -120,7 +128,7 @@ body{
     padding: 0.5vw;
    /* display: block;*/
      /*Para ponerle color a las letras que estaban azules*/
-    font-size: 1.8vw;
+    font-size: 1.5vw;
 
     text-align: center;
     
@@ -163,6 +171,7 @@ body{
     margin: 1vw 0.1vw 1vw 2vw;
     padding: 0.5vw;
     font-size:3vw;
+    cursor:pointer;
 }
 
 .boton-carrito:hover{ 
@@ -228,6 +237,10 @@ body{
 }
 
 
+.formatoimagen img{
+    height: 40vw;
+    object-fit: cover;
+}
 
 .ofertas {
     width: 100%;
@@ -246,20 +259,21 @@ body{
 
  footer{
     width: 100%;
+   
     background-color: var(--color-primario);
     display: inline-block; /*Tuve que poner este display porque sino el margen superior de los logos salia del footer*/
  }
 .redes{
     display: flex;   /*para centrar los logos */
     justify-content: center;
-    margin: 2vw;
+    margin: 1vw;
 }
 
 
 
 .modificar-icono{
     padding: 1vw;
-    font-size: 4vw;
+    font-size: 2.5vw;
     color: var(--color-secundario);
 }
 
