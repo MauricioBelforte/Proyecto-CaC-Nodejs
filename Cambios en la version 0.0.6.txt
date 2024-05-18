@@ -1,0 +1,3 @@
+- Se agrego una ventana modal para el inicio de sesion
+- Se retocaron algunos nombres de clases por conflictos 
+- Se agregaron mas funcionalidades al archivo modal.js para las ventas modales
