@@ -52,6 +52,8 @@ h1,h2,h3{
     display: flex;
     justify-content: center;
 }
+
+
 /*Fin estilos para reutilizar*/
 
 /* Inicio de la barra de navegacion nav que su clase se llama menu-principal */

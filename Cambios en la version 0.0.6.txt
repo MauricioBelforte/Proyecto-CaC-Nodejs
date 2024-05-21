@@ -1,1 +1,0 @@
-- Se agrego galeria de imagenes en el index.html utilizando flexbox 
