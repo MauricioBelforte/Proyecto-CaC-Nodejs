@@ -1,1 +1,0 @@
-- Se paso por la web de validator solo el index.html y se corrigieron algunos detalles
