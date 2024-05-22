@@ -34,6 +34,7 @@ body{
     font-style: normal;
     font-size: 1.7vw;
     
+    
 }
 
 h1,h2,h3{
@@ -442,6 +443,29 @@ h1,h2,h3{
     margin: 1vw;
 }
 
+.info-footer {
+    display: flex;
+    margin:1vw auto;
+    padding: 1vw;
+    gap: 2vw;
+    justify-content: center;
+    
+}
+
+
+.info-footer a {
+    font-size: 1.5vw;
+}
+
+.info-footer a:hover {
+    text-decoration: none;
+}
+
+.info-footer p {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--color-negro);
+}
 
 
 .modificar-icono{
