@@ -1,0 +1,57 @@
+- RESUMEN DE FUSION CON LA RAMA DE MARIANO el 0.2.8 significa que el 2 lo hizo mariano y 8 que es continuacion de lo que venimos haciendo
+git fetch actualiza las referencias remotas pero no crea automáticamente ramas locales para cada rama remota. 
+Necesitas crear manualmente una rama local basada en la rama remota que deseas revisar o fusionar. 
+Esto te da control sobre qué ramas deseas trabajar localmente y evita el desorden de tener demasiadas ramas locales no deseadas.
+
+
+Pasos Detallados para Trabajar con la Rama de tu Compañero
+Supongamos que tu compañero ha hecho cambios en una rama llamada feature-branch. Aquí están los pasos detallados para traer esos cambios y fusionarlos en tu rama principal (master):
+
+Actualizar referencias remotas:
+
+
+git fetch origin
+Esto actualizará las referencias de las ramas remotas, pero no creará nuevas ramas locales.
+
+Listar las ramas remotas (opcional):
+
+
+git branch -a
+Deberías ver algo como:
+
+* master
+  remotes/origin/master
+  remotes/origin/feature-branch
+
+Crear una rama local basada en la rama remota de tu compañero:
+
+git switch -c rama-mariano origin/rama-mariano
+Ahora tienes una rama local rama-mariano que es una copia de la rama remota origin/rama-mariano.
+
+Revisar los cambios en la nueva rama local:
+
+
+git log
+git diff master
+Puedes revisar los commits y las diferencias entre rama-mariano y master.
+
+Volver a la rama master:
+
+
+git switch master
+Fusionar la rama rama-mariano en master:
+
+
+git merge rama-mariano
+Esto fusionará los cambios de rama-mariano en master. Si hay conflictos, Git te notificará y deberás resolverlos.
+
+Resolver conflictos y hacer commit (si es necesario):
+
+
+# Resolver conflictos en los archivos
+git add <archivo-resuelto>
+git commit -m "Resolved merge conflicts from feature-branch"
+Push los cambios a la rama remota master:
+
+
+git push origin master
