@@ -60,7 +60,7 @@
   </header>
 
   <main>
-    <h3 id="register-form-titulo">Registrarse como Nuevo Usuario/a</h3>
+    <h3 class="centrar-titulo" id="register-form-titulo">Registrarse como Nuevo Usuario/a</h3>
     <section id="register-form">
         <!-- Formulario de Registro -->
 
@@ -68,7 +68,7 @@
            
         </div>-->
 
-        <div class="modal-content-iniciodesesion">
+        <div class="content-registro">
             <div class="form-container">
                 
                 <!-- Formulario de Datos Personales -->
@@ -135,8 +135,11 @@
                             <label for="province">Provincia</label>
                             <input type="text" id="province" name="province" placeholder="Ingrese aquí la provincia donde reside" required>
                         </div>
-                        <button type="button" id="registerCancel1">Cancelar</button>
-                        <button type="button" id="registerSecondStep">Siguiente</button>
+                        <div class="contenedor-botones">
+
+                          <button type="button" id="registerCancel1">Cancelar</button>
+                          <button type="button" id="registerSecondStep">Siguiente</button>
+                        </div>
                     </form>
                 </div>
 
@@ -183,9 +186,12 @@
                                 <input type="text" id="x-twitter" name="x-twitter" placeholder="Ingrese su usuario de X">
                             </div>
                         </div>
-                        <button type="button" id="registerCancel2">Cancelar</button>
-                        <button type="button" id="registerFirstStep">Anterior</button>
-                        <button type="button" id="registerConfirm">Registrarse</button>
+                        <div class="contenedor-botones">
+
+                          <button type="button" id="registerCancel2">Cancelar</button>
+                          <button type="button" id="registerFirstStep">Anterior</button>
+                          <button type="button" id="registerConfirm">Registrarse</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -213,11 +219,13 @@
       <a href="https://www.youtube.com/" target="_blank"> <i class="fa-brands fa-youtube modificar-icono"></i></a>
       <a href="https://www.linkedin.com/" target="_blank"> <i class="fa-brands fa-linkedin modificar-icono"></i> </a>
     </div>
-    <a href="#">Términos y condiciones</a>
+    <div class="info-footer">
+      <a href="#">Términos y condiciones</a>
     <a href="#">Preguntas frecuentes</a>
     <a href="#">Ayuda</a>
 
-    <p>© 2024 Indumentaria CaC</p>
+    <p>© 2024 Indumentaria TREX</p>
+    </div>
   </footer>
 
   <!-- Se recomienda colocar las ventanas modales dentro del body, fuera del main y despues del footer antes de los scripts js -->

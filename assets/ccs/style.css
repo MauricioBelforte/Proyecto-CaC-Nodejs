@@ -34,6 +34,7 @@ body{
     font-style: normal;
     font-size: 1.7vw;
     
+    
 }
 
 h1,h2,h3{
@@ -254,6 +255,18 @@ h1,h2,h3{
 }
 
 
+.content-registro {
+    background-color: #fefefe;
+    margin:5vw auto; 
+    width: 60%; 
+    
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 1rem rgb(223, 223, 223));
+}
+.content-registro h3 {
+    text-align: center;
+    margin: 1vw;
+}
 
 .form-container{
    
@@ -274,6 +287,34 @@ h1,h2,h3{
     border: none;
     border-radius: 4px;
     
+  }
+
+
+  .contenedor-botones{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5vh;
+    margin-right: 5%;
+  }
+
+  .form-container .contenedor-botones button {
+    font-size: 1.4vw;
+    font-weight: 300;
+    color: #fff;
+    background-color: #414446;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0;
+    margin: 1vw;
+    padding: 1%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  .form-container .contenedor-botones button:hover {
+    color: var(--color-negro);
+    background-color: #d1d1d1;
   }
 
   .form-container input {
@@ -442,6 +483,29 @@ h1,h2,h3{
     margin: 1vw;
 }
 
+.info-footer {
+    display: flex;
+    margin:1vw auto;
+    padding: 1vw;
+    gap: 2vw;
+    justify-content: center;
+    
+}
+
+
+.info-footer a {
+    font-size: 1.5vw;
+}
+
+.info-footer a:hover {
+    text-decoration: none;
+}
+
+.info-footer p {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--color-negro);
+}
 
 
 .modificar-icono{
