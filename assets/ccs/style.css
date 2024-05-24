@@ -1,10 +1,13 @@
 *  {  /*Normalizacion: Esto es para darle un formato general a toda la pagina, para evitar problemas con los margenes automaticos que ponen los navegadores*/
-    font-family: "Kanit", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	font-family: "Kanit", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	box-sizing: border-box;
+	margin: 0;
+	padding-top: 0%;
+	padding-right: 0%;
+	padding-left: 0%;
+	padding-bottom: 0%;
     
 }
 
@@ -264,8 +267,9 @@ h1,h2,h3{
     filter: drop-shadow(0px 0px 1rem rgb(223, 223, 223));
 }
 .content-registro h3 {
-    text-align: center;
-    margin: 1vw;
+	text-align: center;
+	margin: 1vw;
+	padding-right: 0px;
 }
 
 .form-container{
@@ -277,18 +281,20 @@ h1,h2,h3{
 
 }
 
-.form-container label, .form-container input {
-    display: inline-block;
-    font-size: 1em;
-    font-weight:200;
-    width: 100%;
-    margin: 1%;
-    padding: 1%;
-    border: none;
-    border-radius: 4px;
+.form-container label, .form-container input, .form-container textarea {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 200;
+	
+	margin: 1%;
+	padding: 1%;
+	border-style: none;
+	
     
   }
-
+.form-container textarea {
+	width: 98%;
+}
 
   .contenedor-botones{
     display: flex;
@@ -323,8 +329,10 @@ h1,h2,h3{
 
   .campo-label-imput{
     margin:2vw 3vw;
-    
+	   
   }
+
+}
 .modal-content-carrito {
     background-color: var(--color-background);
     
@@ -519,3 +527,13 @@ h1,h2,h3{
 }
 
  /*Fin del footer*/
+
+/*CONTACTO*/
+#register-step2{
+	display: block;
+	padding: 20px 0px ;
+}
+
+table{
+	margin: 0px auto 15px;	
+}
