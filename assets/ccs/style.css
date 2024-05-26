@@ -257,15 +257,15 @@ h1,h2,h3{
 
 .content-registro {
     background-color: #fefefe;
-    margin:5vw auto; 
-    width: 60%; 
+    margin:3vw auto; 
+    width: 90%; 
     
     border-radius: 10px;
     filter: drop-shadow(0px 0px 1rem rgb(223, 223, 223));
 }
 .content-registro h3 {
     text-align: center;
-    margin: 1vw;
+    margin: 1.5vw;
 }
 
 .form-container{
@@ -292,7 +292,7 @@ h1,h2,h3{
 
   .contenedor-botones{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     margin-bottom: 5vh;
     margin-right: 5%;
   }
@@ -318,13 +318,13 @@ h1,h2,h3{
   }
 
   .form-container input {
-    width: 98%;
+    width: 95%;
   }
 
   .campo-label-imput{
-    margin:2vw 3vw;
-    
+    margin:0.5vw 1vw;    
   }
+
 .modal-content-carrito {
     background-color: var(--color-background);
     
@@ -519,3 +519,64 @@ h1,h2,h3{
 }
 
  /*Fin del footer*/
+
+
+
+
+#register-step-2 {
+    display: none;
+}
+
+ /*Definicion de grid para el formulario de registro*/
+
+ #personalDataForm, #contactDataForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+  #passwordConditions {
+    grid-column: span 2;
+  }
+
+  #birthdateField, #emailField, #botonesStep1, #botonesStep2 {
+    grid-column: span 2;
+  }
+
+  #documentTypeIntroduced {
+    width: 100%;
+  }
+
+  #botonesStep1, #botonesStep2 {
+    width: 100%;
+  }  
+
+  #registerStepCancel1, #registerStepSiguiente {
+    width: 100%;
+  }
+
+  #registerStepCancel2, #registerStepAnterior, #registerStepConfirm {
+    width: 100%;
+  }
+
+  .btnHomeConfirmRegistro {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 3vw auto;
+    font-size: 2vw;
+    color: #fff;
+    background-color: #414446;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0;
+    cursor: pointer;    
+    border: none;    
+  }
+    
+  
+
