@@ -92,12 +92,26 @@ h1,h2,h3{
     
 }
 
-.menu-principal ul {
+.boton-hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.boton-hamburguesa:hover{ 
+    color: var(--color-terceario);  
+}
+
+.menu-principal .menu-variable {
    
     margin-top: auto;
     margin-bottom: auto;
     list-style: none;/* para quitar los puntitos a las listas*/
-    margin-left: 1vw;
+    
     margin-right: auto /*con esto coloque los items ul mas a la izquierda pegados al logo*/
   }
 
@@ -148,17 +162,22 @@ h1,h2,h3{
     
 }
 
+.botones-derecha {
+    display: flex;
+    justify-content: end;
+    gap:4vw;
+    margin-right: 2vw;
+}
 
 
-
-.botones-inicio{
+.botones-iniciosesion-registro{
     display: flex;
     align-items: center;
-    right: 100;
+  
 
     
 }
-.botones-inicio .boton-inicio-registro {
+.botones-iniciosesion-registro .boton-inicio-registro {
     margin-left: 1vw;
     background-color: #555;
     color: var(--color-secundario);
@@ -169,7 +188,7 @@ h1,h2,h3{
     text-decoration: none;
 }
 
-.botones-inicio .boton-inicio-registro:hover {
+.botones-iniciosesion-registro .boton-inicio-registro:hover {
     background-color: #777;
     color: var(--color-blanco);
 }
@@ -182,6 +201,7 @@ h1,h2,h3{
     margin: 1vw 0.1vw 1vw 2vw;
     padding: 0.5vw;
     font-size:3vw;
+    
     cursor:pointer;
 }
 
@@ -226,25 +246,29 @@ h1,h2,h3{
     top: 0;
     width: 100%; /* Anchura del modal */
     height: 100%; /* Altura del modal */
-    overflow: auto;
+    /* overflow: auto; LO DEJO COMENTADO PORQUE HACIA UN SCROLL RARO EN VERTICAL*/
     background-color: rgba(0, 0, 0, 0.5); /* Fondo opaco */
+    transition:all 1s ease-in-out;
+    
     
 }
 .modal-carrito {
     right: 0; /* para posicionarlo arriba a la derecha*/
-    z-index: 2; /*para darle una altura por encima del resto*/
+    z-index: 7; /*para darle una altura por encima del resto*/
+    transition: all 1s ease-out;
 }
 
 .modal-iniciodesesion{
-    
-    z-index: 3;
+    transition: all 1s ease-out;
+    z-index: 10;
     
 }
 
 .modal-content-iniciodesesion {
     background-color: #fefefe;
     margin:10vw auto; 
-    width: 30%; 
+    width: 30vw; 
+    height: auto;
     
     border-radius: 10px;
     filter: drop-shadow(0px 0px 1rem rgb(14, 14, 14));
@@ -272,8 +296,9 @@ h1,h2,h3{
    
     background-color: rgb(246, 246, 246);
     padding: 1%;
-    margin: 0 auto;
+    height: 100%;
     border-radius: 5px;
+    
 
 }
 
@@ -337,15 +362,18 @@ h1,h2,h3{
 }
 
 .modal-lista{
-    margin-top: 20px;
+    margin-top: 5vh;
+    margin-left: 2vw;
 }
 
 .close {    /*esto es la x para cerrar el modal del carrito*/
     color: #aaa;
+    
     float: right;
     margin-right: 4%;
-    font-size: 1.5em;
+    font-size: 5vh;
     font-weight: bold;
+    height: 5vh;
 }
 
 .close:hover,
@@ -437,6 +465,24 @@ h1,h2,h3{
 }
 
 @media (max-width:768px){  /*de aca para abajo*/
+    
+
+    .menu-principal{
+        height: 15vh;
+    }
+
+    .menu-principal .logo {
+        width: auto;
+        height: 10vh;
+        
+    }
+
+    .menu-principal .logo img {
+        height: 10vh;
+       width: auto;
+        
+    }
+
     .galeria-productos figure img{
         width: 40vw; /*Para limitar el ancho de cada elemento responsivo*/
       
@@ -446,6 +492,110 @@ h1,h2,h3{
         font-size: 4vw;
         
     }
+
+    .boton-hamburguesa {
+        display: block;  /* Mostrar el menú hamburguesa en pantallas pequeñas */
+    }
+
+    .menu-variable {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 14vh;
+        left: 0;
+        height: 35vh;
+    }
+
+    .menu-variable.show {
+        display: flex; /* Mostrar el menú principal cuando tiene la clase .show */
+        z-index: 5;
+    }
+
+    .botones-iniciosesion-registro {
+        display: none;
+    }
+
+    .botones-iniciosesion-registro.show {
+        display: flex;
+        
+       
+        
+        background-color: #333;
+        position: absolute;
+        top: 40vh; /* A que altura se posicionan los botones inicio de sesion y registrarse*/
+        margin-left: 2vw;
+        z-index: 6;
+    }
+        
+    .boton-carrito{
+        font-size: 5vh;
+    }
+    .boton-hamburguesa{
+        font-size: 5vh;
+    }
+    
+    .menu-principal ul li {
+        height: 5vh;
+    }
+    .menu-principal ul li a {
+        font-size: 3vh;
+        padding: 1vw;
+    }
+
+    .botones-iniciosesion-registro .boton-inicio-registro {
+        margin-left: 1vw;
+        
+        padding: 0.5vw 1vw;
+        cursor: pointer;
+        font-size: 3vw;
+        
+    }
+
+    .modal-content-iniciodesesion {
+      
+        margin:15vh auto; 
+        width: 50vw; 
+        height: 60vw;
+        
+    
+    }
+
+    .form-container{
+   
+        
+        padding: 1%;
+       
+        border-radius: 5px;
+    
+    }
+
+    .form-container label, .form-container input {
+        
+        font-size: 4vw;
+        font-weight:200;
+        width: 100%;
+        margin: 1%;
+        padding: 1%;
+        
+        
+      }
+
+      .btn {
+        
+        
+        padding: 10px 20px;
+        margin: 3vw auto;
+        font-size: 4vw;
+      
+       
+        
+        
+    }
+
+   
+        
 }
 @media (max-width:480px){  /*de aca para abajo*/
     .galeria-productos figure img{
@@ -456,6 +606,70 @@ h1,h2,h3{
 
         font-size: 8vw;
         
+    }
+
+    .menu-principal .logo {
+        width: auto;
+        height: 20vw;
+        
+    }
+
+    .menu-principal .logo img {
+        height: 20vw;
+       width: auto;
+        
+    }
+
+    .boton-carrito{
+        font-size: 9vw;
+    }
+    .boton-hamburguesa{
+        font-size: 9vw;
+    }
+
+    .botones-derecha {
+        display: flex;
+        justify-content: end;
+        gap:6vw;
+        margin-right: 2vw;
+    }
+
+    .menu-principal ul li a {
+        font-size: 8vw;
+        padding: 1vw;
+    }
+
+    .botones-iniciosesion-registro.show {
+     
+        top: 40vh; /* Ajusta según la longitud del menú */
+        margin-left: 2vw;
+        
+    }
+
+    .botones-iniciosesion-registro .boton-inicio-registro {
+        margin-left: 1vw;
+        
+        padding: 0.5vw 1vw;
+        cursor: pointer;
+        font-size: 6vw;
+        
+    }
+
+    .form-container label, .form-container input {
+        
+        font-size: 4vh;
+       
+        
+        
+      }
+
+    .modal-content-iniciodesesion {
+      
+        margin:15vh auto; 
+        width: 80vw; 
+        height: 50vh;
+        
+    
     }
 }
 
@@ -522,6 +736,10 @@ h1,h2,h3{
 
 
 
+/*--- Configuraciones del formulario de registro ---*/
+#register-step-1 {
+    display: block;
+}
 
 #register-step-2 {
     display: none;
@@ -553,11 +771,11 @@ h1,h2,h3{
     width: 100%;
   }  
 
-  #registerStepCancel1, #registerStepSiguiente {
+  #registerCancel1, #registerSiguiente {
     width: 100%;
   }
 
-  #registerStepCancel2, #registerStepAnterior, #registerStepConfirm {
+  #registerCancel2, #registerAnterior, #registerConfirm {
     width: 100%;
   }
 
