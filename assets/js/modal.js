@@ -88,5 +88,82 @@
         modalConfirm.style.display = "block";
     }
 
+
+    function validarFormulario() {
+        // Se leen las referencias a los elementos del formulario
+        const nombre = document.getElementById("nombre");
+        const email = document.getElementById("email");
+        const asunto = document.getElementById("contactAsuntoSelected");
+        const mensaje = document.getElementById("mensaje");
+        const tipoContactoPersonal = document.getElementById("tipoContactoPersonal");
+        const tipoContactoEmpresa = document.getElementById("tipoContactoEmpresa");
+      
+        // Se chequea si todos los campos obligatorios fueron rellenados
+        if (nombre.value === "") {
+          alert("¡El campo 'Nombre' es obligatorio!");
+          nombre.focus();
+          return false;
+        }
+      
+        if (email.value === "") {
+          alert("¡El campo 'Correo electrónico' es obligatorio!");
+          email.focus();
+          return false;
+        }
+      
+        if (asunto.value === "") {
+          alert("¡El campo 'Asunto' es obligatorio!");
+          asunto.focus();
+          return false;
+        }
+      
+        if (mensaje.value === "") {
+          alert("¡El campo 'Mensaje' es obligatorio!");
+          mensaje.focus();
+          return false;
+        }
+      
+        // Se chequea si se ingresó un formato válido de email ingresado tiene
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value)) {
+          alert("¡Ingrese un formato de correo electrónico válido!");
+          email.focus();
+          return false;
+        }
+      
+        // Se cheque si se seleccionó alguna de las opciones del los Radio-Button
+        if (!tipoContactoPersonal.checked && !tipoContactoEmpresa.checked) {
+          alert("¡Seleccione un tipo de contacto!");
+          tipoContactoPersonal.focus();
+          return false;
+        }
+      
+        // Si se pasan todas las validaciones, se envia el formulario y se muestra el mensaje de éxito
+        const formularioContacto = document.getElementById("formularioContacto");
+        const mensajeExito = document.getElementById("mensajeExito"); // Get the success message element
+      
+        formularioContacto.addEventListener('submit', (event) => {
+          event.preventDefault();  // Evitar el envío de formulario predeterminado
+      
+          // Se envian los datos del formulario 
+      
+          // Se muestra el mensaje de exito
+          mensajeExito.textContent = "Mensaje enviado exitosamente!";
+          mensajeExito.style.display = "block"; // Show the success message
+      
+          // Se limpia el formulario en caso de que el usuario desee enviar otra consulta.
+          formularioContacto.reset();
+        });
+      
+        // Se autoriza el envío del formulario
+        return true;
+      }
+      
+
+      const formularioContacto = document.getElementById("formularioContacto");
+      formularioContacto.addEventListener("submit", validarFormulario);
+      
+      
+      
     
     
