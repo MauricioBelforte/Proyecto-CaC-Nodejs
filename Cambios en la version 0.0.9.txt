@@ -1,1 +1,5 @@
--- Retoque esteticamente el formulario y el footer
+- Coloque un boto para el menu hamburguesa
+- Modifique varias clases y agregue otras en os puntos de cortes
+- Y un js que maneje la funcionalidad
+
+- Tambien voy a crear una carpeta que diga views que contenga todas las demas paginas html como la del registro,hombres etc 

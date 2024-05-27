@@ -31,6 +31,9 @@
     window.onclick = function(event) {
         if (event.target == modalCarrito) {
             modalCarrito.style.display = "none";
+        }else if(event.target == modalInicio) {
+            modalInicio.style.display = "none";
+
         }
     }
 
