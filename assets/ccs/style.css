@@ -176,6 +176,7 @@ h1,h2,h3{
 .botones-iniciosesion-registro{
     display: flex;
     align-items: center;
+    width: 25%; /* Se lo agregue porque el boton iniciar sesion se dividia en 2 palabras*/
   
 
     
