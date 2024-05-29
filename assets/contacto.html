@@ -20,43 +20,87 @@
 	<body>
 		<header>
 		</header>
-		<main>
-			<h3 class="centrar-titulo" id="contacto">CONTACTO</h3>
+		<main>    
 			<section id="register-form">
+				<h3 class="centrar-titulo" id="register-form-titulo">Contactanos</h3>
+		
+				<!-- Formulario de Contacto -->
+				
 				<div class="content-registro">
-					<div class="form-container">
-							<!-- Datos para contactar-->
-						<div id="register-step1" class="step">
-							<h3>Datos de contacto</h3>
-							<form action="/index.html" method="post">
-								<label for="cname">Nombre:</label><br>
-								<input type="text" id="cname" name="cname" required><br>
-								<label for="cempresa">Empresa:</label><br>
-								<input type="text" id="cempresa" name="cempresa" required><br>
-								<label for="ctel">Telefono:</label><br>
-								<input type="text" id="ctel" name="ctel" required><br>
-								<label for="cemail">Email:</label><br>
-								<input type="email" id="cemail" name="cemail" required><br>
-								<label for="cmessage">Mensaje:</label><br>
-								<textarea id="cmessage" name="cmessage" required></textarea>
-								<input type="submit" value="Enviar">
-							</form>
+					<div class="form-container" id="contactForm">
+		
+						<form id="formularioContacto" onsubmit="return validarFormulario()">
+		
+						<div class="campo-label-imput" id="nombreContactField">
+							<label for="nombre">Nombre:</label>
+							<input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
 						</div>
-						<!-- Otros Medios de Contacto -->
-						<div id="register-step2" class="step">
-							<h6 style="text-align: center">Otros medios</h6>
-							<table width="100%" style="width:90%">
-								<tr><td>Tel: </td><td>0800-222-2224 </td><td style="text-align:end;">Email:</td><td>&nbsp;trex@trex.com</td> 
-								</tr>
-								<tr><td>Tel: </td><td>0800-222-2224 </td><td></td><td></td></tr>
-							</table>
+						<div class="campo-label-imput" id="emailContactField">
+							<label for="email">Correo electrónico:</label>
+							<input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
 						</div>
+						<div class="campo-label-imput" id="asuntoContactField">
+							<label for="contactAsuntoSelected">Asunto:</label>
+							<select id="contactAsuntoSelected" name="asunto" required>
+								<option value="">Seleccione un asunto</option>
+								<option value="consulta">Consulta general</option>
+								<option value="sugerencia">Sugerencia</option>
+								<option value="reclamo">Reclamo</option>
+							</select>
+						</div>
+						<div class="campo-label-imput" id="mensajeContactField">
+							<label for="mensaje">Mensaje:</label>
+							<textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" rows="5" required></textarea>
+						</div>
+						<div class="campo-label-imput" id="tipoContactField">
+							<label id="tituloTipoContacto">Tipo de contacto:</label>
+							<label for="tipoContactoPersonal">Personal</label>
+							<input type="radio" id="tipoContactoPersonal" name="tipoContacto" value="personal" required>
+							<label for="tipoContactoEmpresa">Empresa</label>
+							<input type="radio" id="tipoContactoEmpresa" name="tipoContacto" value="empresa" required> 
+						</div>
+						<div class="campo-label-imput" id="contactImageUpload">
+							<label for="imgUploadContact" id="lblImgUploadContact">Imagen (opcional):</label>
+							<input type="file" id="imgUploadContact" name="imagen">
+						</div>
+										   
+						<button type="submit" id="btnEnviarConsulta">Enviar formulario</button>
+		
+						</form>
 					</div>
+					
 				</div>
-			</section>	
-		</main>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
- 		<script src="js/modal.js"></script>
+		<!-- Otros Medios de Contacto -->
+		<div id="register-step2" class="step">
+			<h6 style="text-align: center">Otros medios</h6>
+			<table width="100%" style="width:90%">
+				<tr><td>Tel: </td><td>0800-222-2224 </td><td style="text-align:end;">Email:</td><td>&nbsp;trex@trex.com</td> 
+				</tr>
+				<tr><td>Tel: </td><td>0800-222-3548 </td><td></td><td></td></tr>
+			</table>
+		</div>
+			</section>
+		
+			
+		
+		  </main>
+		
+		   <!-- Modal de Confirmación -->
+		<div id="ventanaModalContactConfirm" class="modales">
+			<div class="modal-content-iniciodesesion">
+			<span class="close">&times;</span>
+				<div class="form-container" id="modalRegisterConfirmItems">
+					<h2 id="registerConfirmCheck"><i class="fas fa-check"></i> Registro Exitoso</h2>
+					<p id="registerConfirmMsj1">¡ SU MENSAJE FUE ENVIADO EXITOSAENTE !</p>
+					<p id="registerConfirmMsj2">CONSULTE SU CORREO ELECTRONICO PARA VALIDAR SU INSCRIPCION.</p>
+					<a href="../index.html" class="btnHomeConfirmRegistro">Volver al Inicio</a>
+				</div>
+			</div>
+		</div>
+		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../assets/js/modal.js"></script>
+		<script src="../assets/js/menus.js"></script>
+		
 	</body>
 </html>
 
