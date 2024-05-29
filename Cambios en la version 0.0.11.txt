@@ -1,0 +1,1 @@
+- Se movieron todos los archivos html de la carpeta assets a views
