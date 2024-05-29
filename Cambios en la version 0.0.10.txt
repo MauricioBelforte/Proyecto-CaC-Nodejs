@@ -1,0 +1,4 @@
+- Se corrigio el menu de navegacion porque estaba decentrado y no estaba el menu hamburguesa
+- Se agrego el js del menu hamburguesa en el index y se retoco el modal inicio de sesion
+- Se combinaron los dos formularios de contacto y se quito de la barra de navegacion el de mariano
+- Se agregaron clases de bootstrap a las tarjetas de hombre mujer y niños para que sea responsivo
