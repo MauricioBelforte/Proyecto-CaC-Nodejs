@@ -4,10 +4,7 @@
 	font-style: normal;
 	box-sizing: border-box;
 	margin: 0;
-	padding-top: 0%;
-	padding-right: 0%;
-	padding-left: 0%;
-	padding-bottom: 0%;
+	padding: 0;
     
 }
 
@@ -176,7 +173,7 @@ h1,h2,h3{
 .botones-iniciosesion-registro{
     display: flex;
     align-items: center;
-    width: 25%; /* Se lo agregue porque el boton iniciar sesion se dividia en 2 palabras*/
+   /* width: 25%;  Se lo agregue porque el boton iniciar sesion se dividia en 2 palabras*/
   
 
     
@@ -313,6 +310,7 @@ h1,h2,h3{
 	margin: 1%;
 	padding: 1%;
 	border-style: none;
+    width: 100%; /* se lo agregue yo lo tenia asi maury*/
 	
     
   }
