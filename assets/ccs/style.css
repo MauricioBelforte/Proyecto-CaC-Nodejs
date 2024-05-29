@@ -216,7 +216,7 @@ h1,h2,h3{
 
 /*Botones genericos*/
 .btn {
-    display: inline-block;
+    display: flex;
     align-items: center;
     
     padding: 10px 20px;
