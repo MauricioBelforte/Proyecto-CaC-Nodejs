@@ -509,11 +509,13 @@ h1,h2,h3{
         top: 14vh;
         left: 0;
         height: 35vh;
+        transition: all 1s ease-in-out;
     }
 
     .menu-variable.show {
         display: flex; /* Mostrar el menú principal cuando tiene la clase .show */
         z-index: 5;
+        transition: all 0.2s ease-in-out;
     }
 
     .botones-iniciosesion-registro {
