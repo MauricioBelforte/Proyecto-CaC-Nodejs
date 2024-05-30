@@ -863,6 +863,7 @@ h1,h2,h3{
 }
 
 table{
-	margin: 0px auto 15px;	
+    width: 90%;
+	margin: 0px auto 15vh;	
 }
 

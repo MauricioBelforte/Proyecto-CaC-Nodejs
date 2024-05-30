@@ -1,0 +1,10 @@
+Se pasaron todos los archivos html por la web validator
+- Chequeado el index.html sin errores
+
+Dentro de la carpete views
+- Chequeado el segundo index.html sin errores
+- Chequeado el hombre.html se agregaron alt a las imagenes y se agrego el <html lang="es"> sin mas errores
+- Chequeado el mujer.html se agregaron alt a las imagenes y se agrego el <html lang="es"> sin mas errores
+- Chequeado el nino.html se agregaron alt a las imagenes y se agrego el <html lang="es"> sin mas errores
+- Chequeado el contacto.html se agrego al comienzo <!doctype html>  el <html lang="es"> y se quito el style:width de la talba sin mas errores
+
