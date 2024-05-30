@@ -587,6 +587,20 @@ h1,h2,h3{
         
       }
 
+       section  .form-container label, .form-container input { /*ESTE ES PARA SEPARAR EL INICIO DE SESION DE LOS FORMULARIOS GRANDES COMO REGISTRO Y CONTACTO*/
+        
+        font-size: 2.3vw;
+        font-weight:200;
+        width: 100%;
+        margin: 1%;
+        padding: 1%;
+        
+        
+      } 
+
+
+      
+
       .btn {
         
         
