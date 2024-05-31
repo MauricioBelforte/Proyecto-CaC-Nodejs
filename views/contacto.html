@@ -12,9 +12,8 @@
 		<!--Para Google font-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link
-		href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		
 		<!--Fin Google font-->
 	</head>
 
@@ -32,41 +31,44 @@
 		
 						<form id="formularioContacto" onsubmit="return validarFormulario()">
 		
-						<div class="campo-label-imput" id="nombreContactField">
-							<label for="nombre">Nombre:</label>
-							<input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
-						</div>
-						<div class="campo-label-imput" id="emailContactField">
-							<label for="email">Correo electrónico:</label>
-							<input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
-						</div>
-						<div class="campo-label-imput" id="asuntoContactField">
-							<label for="contactAsuntoSelected">Asunto:</label>
-							<select id="contactAsuntoSelected" name="asunto" required>
-								<option value="">Seleccione un asunto</option>
-								<option value="consulta">Consulta general</option>
-								<option value="sugerencia">Sugerencia</option>
-								<option value="reclamo">Reclamo</option>
-							</select>
-						</div>
-						<div class="campo-label-imput" id="mensajeContactField">
-							<label for="mensaje">Mensaje:</label>
-							<textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" rows="5" required></textarea>
-						</div>
-						<div class="campo-label-imput" id="tipoContactField">
-							<label id="tituloTipoContacto">Tipo de contacto:</label>
-							<label for="tipoContactoPersonal">Personal</label>
-							<input type="radio" id="tipoContactoPersonal" name="tipoContacto" value="personal" required>
-							<label for="tipoContactoEmpresa">Empresa</label>
-							<input type="radio" id="tipoContactoEmpresa" name="tipoContacto" value="empresa" required> 
-						</div>
-						<div class="campo-label-imput" id="contactImageUpload">
-							<label for="imgUploadContact" id="lblImgUploadContact">Imagen (opcional):</label>
-							<input type="file" id="imgUploadContact" name="imagen">
-						</div>
-										   
-						<button type="submit" id="btnEnviarConsulta">Enviar formulario</button>
-		
+							<div class="campo-label-imput" id="nombreContactField">
+								<label for="nombre">Nombre:</label>
+								<input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+								<h3 id="nombreEstado"></h3>
+							</div>
+							<div class="campo-label-imput" id="emailContactField">
+								<label for="email">Correo electrónico:</label>
+								<input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" spellcheck="false" required>
+								<h3 id="emailEstado"></h3>
+								
+							</div>
+							<div class="campo-label-imput" id="asuntoContactField">
+								<label for="contactAsuntoSelected">Asunto:</label>
+								<select id="contactAsuntoSelected" name="asunto" required>
+									<option value="">Seleccione un asunto</option>
+									<option value="consulta">Consulta general</option>
+									<option value="sugerencia">Sugerencia</option>
+									<option value="reclamo">Reclamo</option>
+								</select>
+							</div>
+							<div class="campo-label-imput" id="mensajeContactField">
+								<label for="mensaje">Mensaje:</label>
+								<textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" rows="5" required></textarea>
+							</div>
+							<div class="campo-label-imput" id="tipoContactField">
+								<label id="tituloTipoContacto">Tipo de contacto:</label>
+								<label for="tipoContactoPersonal">Personal</label>
+								<input type="radio" id="tipoContactoPersonal" name="tipoContacto" value="personal" required>
+								<label for="tipoContactoEmpresa">Empresa</label>
+								<input type="radio" id="tipoContactoEmpresa" name="tipoContacto" value="empresa" required> 
+							</div>
+							<div class="campo-label-imput" id="contactImageUpload">
+								<label for="imgUploadContact" id="lblImgUploadContact">Imagen (opcional):</label>
+								<input type="file" id="imgUploadContact" name="imagen">
+							</div>
+
+							<button type="submit" id="btnEnviarConsulta">Enviar formulario</button>
+
 						</form>
 					</div>
 					
@@ -99,9 +101,15 @@
 			</div>
 		</div>
 		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/js/modal.js"></script>
-		<script src="../assets/js/menus.js"></script>
+<!--		<script src="../assets/js/registerContact.js"></script>-->
+<!--		<script src="../assets/js/modal.js"></script>-->
+<!--		<script src="../assets/js/menus.js"></script>-->
 		
+		
+		
+<!--		VALIDACION DE CORREO-->
+		<script src="../assets/js/val.js"></script>
+		<!-- <script src="../assets/js/registerContact.js"></script> -->
 	</body>
 </html>
 

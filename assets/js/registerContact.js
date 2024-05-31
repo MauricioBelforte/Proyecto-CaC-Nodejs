@@ -50,13 +50,14 @@ xcerrarRegisterConfirm.onclick = function () {
 
 
 
-      
-  
-      
-  
-      
-        
-        
-        
-      
-      
+// // Validacion del email
+// document.addEventListener("DOMContentLoaded", () => {
+   
+//     const emailInput = document.getElementById("email");
+   
+//     emailInput.addEventListener("keydown", () => {
+//         console.log("¡Campo de correo electrónico enfocado!");
+//     });
+// });
+
+   
