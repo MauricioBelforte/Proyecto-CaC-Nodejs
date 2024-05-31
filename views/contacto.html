@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<style>
+			#nombreEmpresaDiv{
+				display:none;
+			}
+		</style>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>Indumentaria TREX Contacto</title>
@@ -62,6 +67,12 @@
 								<label for="tipoContactoEmpresa">Empresa</label>
 								<input type="radio" id="tipoContactoEmpresa" name="tipoContacto" value="empresa" required> 
 							</div>
+<!-- DIV OCULTO -->				
+							<div id="nombreEmpresaDiv">
+								<label for="tipoContactoEmpresa">Ingrese nombre de empresa:</label>
+								<input type="text" id="empresa" name="empresa">
+							</div>
+
 							<div class="campo-label-imput" id="contactImageUpload">
 								<label for="imgUploadContact" id="lblImgUploadContact">Imagen (opcional):</label>
 								<input type="file" id="imgUploadContact" name="imagen">
